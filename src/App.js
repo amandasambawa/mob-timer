@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -8,6 +7,7 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogContent';
 import DialogContent from '@material-ui/core/DialogContentText';
 import DialogContentText from '@material-ui/core/DialogContentText';
+import MobTable from './MobTable.js';
 
 class App extends Component {
   constructor(props) {
@@ -114,9 +114,9 @@ class App extends Component {
               <h1>{this.state.minutes} : {this.state.formattedSeconds}</h1>
             </div>
             <div>
-            <Button variant="contained" onClick={this.startTimer} color="primary" style={{marginLeft: 10, marginRight: 10}}>Start</Button>
-            <Button variant="contained" onClick={this.stopTimer} color="secondary" style={{marginLeft: 10, marginRight: 10}}>Stop</Button>
-            <Button variant="contained" onClick={this.resetTime} style={{marginLeft: 10, marginRight: 10}}>Reset</Button>
+              <Button variant="contained" onClick={this.startTimer} color="primary" style={{marginLeft: 10, marginRight: 10}}>Start</Button>
+              <Button variant="contained" onClick={this.stopTimer} color="secondary" style={{marginLeft: 10, marginRight: 10}}>Stop</Button>
+              <Button variant="contained" onClick={this.resetTime} style={{marginLeft: 10, marginRight: 10}}>Reset</Button>
             </div>
           </div>
         </header>
@@ -137,6 +137,9 @@ class App extends Component {
             </Button>
           {/* </DialogActions> */}
           </Dialog> 
+        </div>
+        <div style={{marginTop: '2em', marginBottom: '2em', marginLeft: '10%', marginRight: '10%'}}>
+          <MobTable />
         </div>
       </div>
     );
