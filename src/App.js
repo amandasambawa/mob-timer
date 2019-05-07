@@ -12,6 +12,7 @@ import MobTable from './MobTable.js';
 class App extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       inputValue: 10,
       totalSeconds: 600, 
@@ -21,6 +22,7 @@ class App extends Component {
       currentInput: 0,
       open: false,
     }
+    
     this.changeTime = this.changeTime.bind(this);
     this.startTimer = this.startTimer.bind(this);
     this.stopTimer = this.stopTimer.bind(this);
